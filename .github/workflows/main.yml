@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Go Get
+        run: go get -v ./...
+
+      - name: Test
+        run: go test -v ./...
+
+  docker:
+    needs: test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Docker Login
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
+        run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+
+      - name: Docker Build
+        run: docker build -t artfunder/users-service .
+
+      - name: Docker push
+        run: docker push artfunder/users-service
