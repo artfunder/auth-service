@@ -1,0 +1,7 @@
+github.com/artfunder/structs v0.0.0-20201204023131-ac1009ec0634 h1:fXUOstRTqDL+lUlx/T2pmZNJj5gOifgz5clQ5rapC18=
+github.com/artfunder/structs v0.0.0-20201204023131-ac1009ec0634/go.mod h1:kbQIbshfWIfF33wGbWO4LU90Iw9/lxznhMocnN7opwM=
+github.com/gomagedon/expectate v1.0.1 h1:UDlA+XuA2X2IaOvTyQAGyT1mbutPc/CDDz7xd7cC3Yo=
+github.com/gomagedon/expectate v1.0.1/go.mod h1:iynaHs97GMybvVZlkxTF7APDxJJKMLp/cte3lReN5A8=
+github.com/google/go-cmp v0.5.4 h1:L8R9j+yAqZuZjsqh/z+F1NCffTKKLShY6zXTItVIZ8M=
+github.com/google/go-cmp v0.5.4/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
+golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
